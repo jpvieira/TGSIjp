@@ -1,0 +1,28 @@
+.header{
+    background-color:  #000000;
+    color:#fff;
+    font-size: 250%;
+    height:150px;  
+    padding: 20px;
+}
+.bottom{
+    background-color:#ddd;
+    height: 30px;
+    padding: 10px;  
+    text-align: center;
+}
+
+.content{
+    padding: 20px;
+}
+.menu{
+    margin-top: 0px;
+}
+
+.center{
+    background-color:  #d58512;
+    color:#fff;
+    font-size: 250%;
+    height:15px;  
+    padding: 2px;
+}
