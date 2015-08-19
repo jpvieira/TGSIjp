@@ -21,13 +21,13 @@ public class Teste {
     public static void main(String[]args){
         
         Teste teste= new Teste();
-       teste.listapima();
+       //teste.listapima();
         //teste.listausuarios();
         //teste.editusuario();
       // teste.salvausuario();
        // teste.deletarusuario();
        // teste.listaMysql();
-        //teste.listaamostra_paci();
+        teste.listaamostra_paci();
         //teste.editamostrapaci();
         //teste.salva_amostra();
         //teste.deletaramostra();
