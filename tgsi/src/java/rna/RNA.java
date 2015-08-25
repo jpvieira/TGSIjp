@@ -6,11 +6,13 @@
 
 package rna;
 
-import dados.PacienteModelo;
-import dao.PacienteDao;
+import factory.*;
+import dao.CategoriaDao;
+import dao.CategoriaDaoImpl;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Random;
+import modelo.Diabete_pima;
 
 public class RNA {
     
@@ -45,11 +47,12 @@ public class RNA {
         */
         
         //cria os objetos
-        PacienteDao dao = new PacienteDao();
+        modelo.Diabete_pima modelopima = new Diabete_pima();
         TratamentoDeDados td = new TratamentoDeDados();
+        dao.CategoriaDaoImpl categoria=new CategoriaDaoImpl();
         
         //obtem os dados não normalizados para um arrayList       
-        ArrayList<PacienteModelo> dados = dao.consultarTreinamento();
+        ArrayList<modelo.Diabete_pima> dados = (ArrayList<modelo.Diabete_pima>) categoria.lista_Diabetepima();
    
         //normaliza os dados para a variavel de dados normalizados
         double dadosNormalizados[][] = td.normalizarDados(dados);
@@ -273,12 +276,12 @@ public class RNA {
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         
         //cria os objetos
-        PacienteDao dao = new PacienteDao();
         TratamentoDeDados td = new TratamentoDeDados();
+        modelo.Diabete_pima Modelopima = new Diabete_pima();
+        dao.CategoriaDaoImpl categoria=new CategoriaDaoImpl();
         
         //obtem os dados não normalizados para um arrayList       
-        ArrayList<PacienteModelo> dados = dao.consultarTeste();
-   
+        ArrayList<modelo.Diabete_pima> dados = (ArrayList<modelo.Diabete_pima>) categoria.lista_Diabetepima();
         //normaliza os dados para a variavel de dados normalizados
         double dadosNormalizados[][] = td.normalizarDados(dados);
         

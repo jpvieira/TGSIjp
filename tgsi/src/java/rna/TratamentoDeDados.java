@@ -6,14 +6,14 @@
 
 package rna;
 
-import dados.PacienteModelo;
+import modelo.*;
 import java.util.ArrayList;
 
 public class TratamentoDeDados {
     
     private Interface ui = new Interface();
     
-    public double[][] normalizarDados(ArrayList<PacienteModelo> dados){
+    public double[][] normalizarDados(ArrayList<modelo.Diabete_pima> dados){
         
         //define o numero de colunas cuja a ultima é o alvo
         int numeroColunas = 10;
@@ -25,13 +25,13 @@ public class TratamentoDeDados {
         for(int linha = 0; linha < dados.size(); linha++) {
             dadosNormalizados[linha][0] = dados.get(linha).getNb_pregnant();
             dadosNormalizados[linha][1] = dados.get(linha).getPlasma_glucose();
-            dadosNormalizados[linha][2] = dados.get(linha).getDiastolic_press();
+            dadosNormalizados[linha][2] = dados.get(linha).getDiastolic();
             dadosNormalizados[linha][3] = dados.get(linha).getTriceps_skin();
             dadosNormalizados[linha][4] = dados.get(linha).getSerum_insulin();
             dadosNormalizados[linha][5] = dados.get(linha).getBody_mass();
             dadosNormalizados[linha][6] = dados.get(linha).getDiabetes();
             dadosNormalizados[linha][7] = dados.get(linha).getAge();
-            dadosNormalizados[linha][8] = dados.get(linha).getClassificacao();
+            dadosNormalizados[linha][8] = dados.get(linha).getClasse();
         }
         
         this.ui.imprimeMatriz("Dados não normalizados", dadosNormalizados);

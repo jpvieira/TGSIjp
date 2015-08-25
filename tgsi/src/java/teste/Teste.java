@@ -12,6 +12,7 @@ import modelo.Amostra_paci;
 import modelo.Diabete_pima;
 import modelo.Treino_redes;
 import modelo.Usuario;
+import rna.*;
 
 /**
  *
@@ -27,12 +28,13 @@ public class Teste {
       // teste.salvausuario();
        // teste.deletarusuario();
        // teste.listaMysql();
-        teste.listaamostra_paci();
-        //teste.editamostrapaci();
+       // teste.listaamostra_paci();
+       // //teste.editamostrapaci();
         //teste.salva_amostra();
         //teste.deletaramostra();
         //teste.listatreino_redes();
           //teste.salvarTreino();
+        teste.treinodarede();
     }
     
     
@@ -148,6 +150,13 @@ public class Teste {
            
         
         
+public void treinodarede(){
+    Treino_redes treino=new Treino_redes();
+    this.treinodarede();
+}
+        
+
+
 }
         
 
