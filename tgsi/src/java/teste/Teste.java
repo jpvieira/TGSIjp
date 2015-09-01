@@ -151,8 +151,8 @@ public class Teste {
         
         
 public void treinodarede(){
-    Treino_redes treino=new Treino_redes();
-    this.treinodarede();
+   
+   
 }
         
 
